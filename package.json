@@ -1,0 +1,20 @@
+{
+  "name": "FirstProject",
+  "version": "1.0.0",
+  "description": "My First Electron project with Yarn ",
+  "main": "index.js",
+  "repository": "https://github.com/opallios7/electron_first_project.git",
+  "author": "opallios <opallios@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build:darwin": "electron-packager . --out=dist --asar --overwite --platform=darwin --arch=x64",
+    "compress": "cd dist; for file in `ls`; do zip -r -y $file.zip $file; done"
+  },
+  "dependencies": {
+    "electron": "^1.6.6"
+  },
+  "devDependencies": {
+    "electron-packager": "^8.6.0"
+  }
+}
